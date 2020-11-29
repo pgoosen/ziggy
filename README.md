@@ -38,3 +38,38 @@ Level **up** or **down** based on remaining on you goal's target.
 <img src="avatar-images/Avatar_Upgrade_to_L2.png" width="250">
 
 *Notification received when leveling up to Level 2.*
+
+
+## Game rules :video_game:
+
+### Health points
+Health points (HP) represents the health of a player. A player can have a maximum of 50 HP. T
+
+#### Gaining/Losing HP
+A player will gain HP daily.
+If a player levels up, the HP will be reset to the maxiumum of 50.
+
+A player will lose HP:
+* If the end date is reached for a spendings goal and the payer has gone over the goal limits,
+* If the end date is reached for a savings goal and the player has not reached the target,
+* When a transaction is made and the transaction is matched to an active goal.
+
+### Experience points
+Experience points (XP) tracks a player's progress. Players gain eperience points primarily by setting and completing goals. 
+
+A player can gain a level by gaining a certain amount of experience points. Once a player gains a level, the XP is reset to 0, however, any extra XP is carried over.
+
+#### Gaining/Losing XP
+A player will gain XP:
+* If a transaction is made, matched to a spendings goal and the goal limits has not been reached,
+* If a new goal is made,
+* If a goal is completed and the player has managed to stay within limits (spending) or reached target (savings)
+* 
+
+A player will lose XP:
+* If the end date of a spendings goal has been reached and the player has gone over the goal limits,
+* If the end date of a savings goal has been reached and the player has not reached target,
+* If a transaction is made, matched to a spendings goal and the goal limits has been reached,
+
+### Levels
+The game consists of 5 levels. A player will level up by reaching a certain amount of XP points.
