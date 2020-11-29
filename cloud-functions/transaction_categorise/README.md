@@ -38,7 +38,7 @@ Make sure correct project is selected if not specified in `deploy` command:
 
 3. Deploy function:
   ```
-  gcloud functions deploy transaction_categorise --entry-point=CategoriseTransaction --runtime=python38 --trigger-event 'providers/cloud.firestore/eventTypes/document.create' --trigger-resource 'projects/YOUR_PROJECT_ID/databases/(default)/documents/transactions/{docId}' --region=uYOUR_PROJECT_REGION --memory=128MB --timeout=60s --env-vars-file .env.yaml
+  gcloud functions deploy transaction_categorise --entry-point=CategoriseTransaction --runtime=python38 --trigger-event 'providers/cloud.firestore/eventTypes/document.create' --trigger-resource 'projects/YOUR_PROJECT_ID/databases/(default)/documents/transactions/{docId}' --region=YOUR_PROJECT_REGION --memory=128MB --timeout=60s --env-vars-file .env.yaml
   ```
 Remember to specify your project id and region in the above command.
 
