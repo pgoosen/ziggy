@@ -18,7 +18,7 @@ paths:
       consumes:
         - application/json
       x-google-backend:
-        address: https://[GCP_CLOUD_FUNCTION_ADD_TRANSACTION]
+        address: https://[GOOGLE_CLOUD_FUNCTION_ADD_TRANSACTION]
       responses:
         '200':
           description: A successful response
@@ -31,7 +31,7 @@ paths:
       consumes:
         - application/json
       x-google-backend:
-        address: https://[GCP_CLOUD_RUN_SLACK_APP]
+        address: https://[GOOGLE_CLOUD_RUN_SLACK_APP]
       responses:
         '200':
           description: A successful response
