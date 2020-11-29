@@ -10,4 +10,4 @@ Many people struggle to build good financial habits thanks to the ease of shoppi
 *post video link here*
 
 # Design Diagram
-<img src="design/systems_diagram.png" width="400">
+<img src="design/systems_diagram.png" width="800">
