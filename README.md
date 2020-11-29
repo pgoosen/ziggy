@@ -1,1 +1,1 @@
-![Ziggy Logo](/avatar-images/Ziggy Full Logo.png) 
+![Ziggy Logo](/avatar-images/Ziggy_Full_Logo.png) 
