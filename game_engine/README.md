@@ -1,7 +1,7 @@
 # Ziggy Game Engine :unicorn: :video_game:
 
 ## About the project:
-The Ziggy Game Engine is the game engine library developed for use during the 2020 Investec Programmable Banking Hackathon. The game engine conists of classes to enable developers to work with the avatar, goals, transactions and the Investec OpenAPI :credit_card:. 
+The Ziggy Game Engine is the game engine library developed for use during the 2020 Investec Programmable Banking Hackathon. The game engine consists of classes to enable developers to work with the avatar, goals, transactions and the Investec OpenAPI :credit_card:. 
 
 ### Built with:
 Python3.8
