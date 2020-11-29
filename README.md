@@ -11,3 +11,8 @@ Many people struggle to build good financial habits thanks to the ease of shoppi
 
 # Design Diagram
 ![Systems Diagram](/design/systems_diagram.png)
+
+# Levels
+We created an avatar with 5 levels, which represents the game level in a visual way.
+
+![Game Levels](/avatar-images/Levels_no_background.png)
