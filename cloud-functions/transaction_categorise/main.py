@@ -37,6 +37,7 @@ def CategoriseTransaction(event, context):
             send_transaction_notification(transaction_id)
             return Response("failed", status=500)
 
+    send_transaction_notification(transaction_id)
     return "ok"
 
 
