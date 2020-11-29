@@ -1,0 +1,9 @@
+[dev-packages]
+pytest = "*"
+google-cloud-firestore = "*"
+
+[packages]
+google-cloud-firestore = "*"
+
+[requires]
+python_version = "3.8"
