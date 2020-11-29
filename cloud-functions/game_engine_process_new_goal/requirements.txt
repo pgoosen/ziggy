@@ -1,0 +1,4 @@
+./dist/game_engine-0.0.41-py3-none-any.whl
+
+google-cloud-firestore==1.9.0
+google-cloud-pubsub
