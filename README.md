@@ -1,16 +1,27 @@
 <img src="images/readme/Ziggy_Full_Logo.png" width="250">
 
-# Overview
-Thanks to an **Offerzen** hackathon, we designed a game using the **Investec Programmable Banking API**, the Google Cloud Platform for processing and Slack to facilitate communications.
+# Index
+1. [Overview](#overview)
+2. [The Rationale](#the-rationale)
+3. [Demo Video](#demo-video)
+4. [Gameplay](#gameplay)
+5. [Project Design](#project-design)
+6. [Setup](#setup)
 
-# The rationale
+# Overview
 Many people struggle to build good financial habits thanks to the ease of shopping online and the instant gratification they receive, which is more alluring than watching a savings account grow a few cents at time. We want to help users build better financial awareness, one habit at a time, using gamification to incentivise good habits. Our solution gives users a fun and practical way of developing better spending habits, through individualised objectives and instant progress feedback.
 
-# Demo video
-*post video link here*
 
-# Design Diagram
-![Systems Diagram](design/systems_diagram.png)
+## How will this project benefit you?
+The goal of this project is to help players build better financial habits using gamification as an incentive to set good habits and stick to those set habits. By making progress on a goal, a player can see their avatar grow and gain experience, much like they are. Additionally, this project can be used by parent to set financial goals for their kids to teach them good financial habits from a young age.
+
+Watch a demo of the project [here](https://youtu.be/075jidzoJQs).
+
+## Investec Programmable Banking components used
+* The project makes use of the Investec Programmable Banking Card. 
+* Planned expansion includes using the Investec OpenAPI to process transactions like inter-account transfers daily. 
+
+
 
 # Gameplay
 
@@ -73,3 +84,17 @@ A player will lose XP:
 
 ### Levels
 The game consists of 5 levels. A player will level up by reaching a certain amount of XP points.
+
+
+
+# Project Design
+The project is design to be cloud native on Google Cloud Platform. The project makes use of:
+* Cloud Functions and Cloud Run to do most of the processing, 
+* Firestore for data storage, 
+* Pub/Sub for event triggers and communication, and 
+* Cloud Scheduler to schedule daily tasks.
+
+The diagram below shows a simplified overview of the system design and implementation.
+![Systems Diagram](design/systems_diagram.png)
+
+# Setup
