@@ -1,0 +1,44 @@
+# openapi2-functions.yaml
+swagger: '2.0'
+info:
+  title: ziggy-api gateway
+  description: Ziggy API Gateway
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+security:
+  - api_key: []
+paths:
+  /transaction/add:
+    post:
+      summary: Add transaction json
+      operationId: addTransactionPost
+      consumes:
+        - application/json
+      x-google-backend:
+        address: https://[GCP_CLOUD_FUNCTION_ADD_TRANSACTION]
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
+  /ziggy:
+    post:
+      summary: Ziggy cloud run (slack app)
+      operationId: ziggySlackApp
+      consumes:
+        - application/json
+      x-google-backend:
+        address: https://[GCP_CLOUD_RUN_SLACK_APP]
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
+securityDefinitions:
+  api_key:
+    type: "apiKey"
+    name: "key"
+    in: "query"
