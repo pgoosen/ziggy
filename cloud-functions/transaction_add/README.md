@@ -1,5 +1,5 @@
-# Test function
-This functions ingests transaction data from Investec after-transaction event.
+# Transaction Add -  Google Cloud Function
+This functions ingests transaction data from Investec after-transaction event and adds it to the database.
 
 ## Deployment using `gcloud`
 - Make sure correct project is selected if not specified in `deploy` command:
