@@ -11,13 +11,17 @@ Example of a merchant with a predefined category:
 }
 ```
 
-
 ## Deploy cloud function
 
 ### Setup before deploying
 1. Create a PubSub topic for new transactions notifications.
 2. Create a `.env.yaml` file similar to `.env.yaml.sample` and add your project id and the pub sub topic id for new transactions.
-3. [Setup Google Cloud SDK](https://cloud.google.com/sdk/docs/install) if you haven't done so already.
+3. Run the following in the transaction_categorise cloud function directory:
+```
+pipenv lock
+pipenv lock -r > requirements.txt
+```
+4. [Setup Google Cloud SDK](https://cloud.google.com/sdk/docs/install) if you haven't done so already.
 
 ### Deployment using `gcloud` ([Google cloud SDK](https://cloud.google.com/sdk/docs/install))
 Make sure correct project is selected if not specified in `deploy` command:

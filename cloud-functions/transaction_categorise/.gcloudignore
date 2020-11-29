@@ -16,3 +16,6 @@
 .env.yaml
 .env.yaml.sample
 README.md
+build_setup.sh
+Pipfile
+Pipfile.lock
