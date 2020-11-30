@@ -29,3 +29,6 @@ Make sure correct project is selected if not specified in `deploy` command:
   gcloud functions deploy game_engine_process_new_goal --entry-point=ProcessAddGoal --runtime=python38 --trigger-event 'providers/cloud.firestore/eventTypes/document.create' --trigger-resource 'projects/YOUR_PROJECT_ID/databases/(default)/documents/goals/{docId}' --region=YOUR_PROJECT_REGION --memory=128MB --timeout=60s --env-vars-file .env.yaml
   ```
 Remember to specify your project id and region in the above command.
+
+
+[:arrow_left: Go back to Setup list](/README.md#setup)

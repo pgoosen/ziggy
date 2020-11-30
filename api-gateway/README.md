@@ -15,3 +15,6 @@
 3. Follow [these instructions](https://cloud.google.com/api-gateway/docs/quickstart#creating_a_gateway) to create a **gateway**.
 4. Follow [these instructions](https://cloud.google.com/api-gateway/docs/quickstart#securing_access_by_using_an_api_key) to secure access to the gateway by using an API key.
     - This API key should be used in the After-Transaction Card Code as well as the Slack App.
+
+
+[:arrow_left: Go back to Setup list](/README.md#setup)

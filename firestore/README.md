@@ -10,3 +10,6 @@ All data for the application is stored in Firestore.
 
 #### Instructions
 - Follow [these instructions](https://cloud.google.com/firestore/docs/quickstart-servers#create_a_in_native_mode_database) to create a Firestore instance in your GCP project.
+
+
+[:arrow_left: Go back to Setup list](/README.md#setup)

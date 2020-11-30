@@ -42,3 +42,5 @@ Remember to specify your project id and region in the above command.
 
 
 
+
+[:arrow_left: Go back to Setup list](/README.md#setup)
