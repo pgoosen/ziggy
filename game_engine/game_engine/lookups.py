@@ -21,4 +21,5 @@ class BudgetCategory:
     Education ="70926eae-ee48-46e8-8c27-ef7de2ac7ef2"
     Pets = "e072aa38-d345-46c1-9014-9bea1da77430"
     HobbiesSport = "00c93710-4708-465b-b885-0c9f474ad8b8"
+    Savings = "41af5158-5dcd-41c7-857f-9f22549fd4cc"
 
