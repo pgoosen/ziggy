@@ -15,6 +15,7 @@
         3. [Notifications (Slack)](#notifications-(slack))
 3. [Project Design](#project-design)
 4. [Setup](#setup)
+5. [Known bugs and issues](#known-bugs-and-issues)
 
 # [Overview](https://community.offerzen.com/t/hackathon-create-out-of-the-ordinary-solutions-to-everyday-financial-problems/32)
 Many people struggle to build good financial habits thanks to the ease of shopping online and the instant gratification they receive, which is more alluring than watching a savings account grow a few cents at time. This project aims to help users build better financial awareness, one habit at a time, using gamification to incentivise good habits. The project gives users a fun and practical way of developing better spending habits, through individualised objectives and instant progress feedback.
@@ -98,6 +99,9 @@ The interface for the game is a custom Slackbot called Ziggy. Using the Slackbot
 
 *Different notifications a player receives*
 
+![](images/readme/avatar_notification.gif)
+
+*Avatar progress report*
 
 
 # Project Design
@@ -136,3 +140,6 @@ A daily process is also triggered using Cloud Scheduler and a Pub/Sub. This trig
     - Transaction Categorise function [(Instructions)](cloud-functions/transaction_categorise/README.md).
 6. Create API Gateway. [(Instructions)](api-gateway/README.md).
 7. Upload code to Investec programmable card. [(Instructions)](card/README.md).
+
+# Known bugs and issues
+Bugs and issues can be found [here](https://github.com/pgoosen/ziggy/issues)
