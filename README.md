@@ -124,7 +124,7 @@ A daily process is also triggered using Cloud Scheduler and a Pub/Sub. This trig
 
 # Setup
 
-1. Create Google Cloud Project.
+1. Create Google Cloud Project [(Instructions])(https://cloud.google.com/resource-manager/docs/creating-managing-projects#gcloud).
 2. Create a Firestore database [(Instructions)](firestore/README.md).
 3. Create Storage bucket and upload avatar images [(Instructions)](images/avatar/README.md).
 4. Create Slack App Cloud Run [(Instructions)](/cloud-run/slack_app/README.md).
