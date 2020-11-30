@@ -120,7 +120,7 @@ When the user uses their Investec Programmable Card, the transaction is captured
 
 The setting or updating of the transaction category triggers an update event. The firestore update event triggers the game_engine_process_transaction cloud function. This function processes the transaction against goals and update the avatar as needed (xp, hp, and level). Once the avatar has been updated, a notification is sent to the user using the Slackbot.
 
-A daily process is also triggered using Cloud Scheduler and a Pub/Sub. This triggers a few daily tasks such as increasing the avatar health, activating and deactviating goals, and processing completed goals.
+A daily process is also triggered using Cloud Scheduler and a Pub/Sub. This triggers a few daily tasks such as increasing the avatar health, activating and deactviating goals, processing completed goals, and process transactions from PrimeSaver accounts.
 
 # Setup
 

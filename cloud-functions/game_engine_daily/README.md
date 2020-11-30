@@ -4,8 +4,6 @@ This function processes daily tasks for the game.
 The function is triggered by an cron job (Cloud Scheduler) that publishes a message to a Pub/Sub topic. The function then processes the tasks specified in the message. These tasks include increase the avatar health daily, activating or deactivating goals, processing completed goals, and retrieving transactions from PrimeSaver accounts using the Investec OpenAPI.
 
 ## Deploy cloud function
-
-
 ### Add cloud scheduler cron job
 A cloud scheduler is required to trigger the cloud function daily. In order to do this, follow the instructions [here](https://cloud.google.com/scheduler/docs/creating).
 
