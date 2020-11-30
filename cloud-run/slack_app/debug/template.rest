@@ -1,0 +1,5 @@
+# Simple request for local testing
+POST http://localhost:8080/
+content-type: application/x-www-form-urlencoded
+
+payload= {}

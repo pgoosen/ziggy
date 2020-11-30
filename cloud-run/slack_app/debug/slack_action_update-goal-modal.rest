@@ -1,0 +1,19 @@
+# Simple request for local testing
+POST http://localhost:8080/
+content-type: application/x-www-form-urlencoded
+User-Agent: Slackbot
+
+payload={
+    "type": "block_actions", 
+    "user": {"id": "debug.user.id", "username": "debug.user", "name": "debug.user", "team_id": "debug.team.id"}, 
+    "api_app_id": "debug.app.id", 
+    "token": "debug.token", 
+    "container": {"type": "message", "message_ts": "1606649425.016800", "channel_id": "debug.channel.id", "is_ephemeral": "False", "thread_ts": "1606649424.015300"}, 
+    "trigger_id": "debug.trigger.id", 
+    "team": {"id": "debug.team.id", "domain": "debug.domain"}, 
+    "channel": {"id": "debug.channel.id", "name": "goals"}, 
+    "message": {"bot_id": "debug.bot.id", "type": "message", "text": "This content can't be displayed.", "user": "debug.user.id", "ts": "1606649425.016800", "team": "debug.team.id", "blocks": [{"type": "header", "block_id": "YBH6", "text": {"type": "plain_text", "text": ":dart: Goal", "emoji": "True"}}, {"type": "section", "block_id": "zsT", "fields": [{"type": "mrkdwn", "text": "*Active:* 2020-11-29 - 2020-11-30", "verbatim": "False"}, {"type": "mrkdwn", "text": "*Type:* Savings", "verbatim": "False"}, {"type": "mrkdwn", "text": "*Spending type:* TotalValue", "verbatim": "False"}, {"type": "mrkdwn", "text": "*Merchant: :* Me - (ME)", "verbatim": "False"}, {"type": "mrkdwn", "text": "*Value limit:* 1", "verbatim": "False"}]}, {"type": "actions", "block_id": "SPPe", "elements": [{"type": "button", "action_id": "click_update", "text": {"type": "plain_text", "text": "Update", "emoji": "True"}, "style": "primary", "value": "eeacdd7b-e4d6-4e93-867f-236c84013aaf"}, {"type": "button", "action_id": "click_delete", "text": {"type": "plain_text", "text": "Delete", "emoji": "True"}, "style": "danger", "value": "eeacdd7b-e4d6-4e93-867f-236c84013aaf"}]}], "thread_ts": "1606649424.015300", "parent_user_id": "debug.user.id"}, 
+    "state": {"values": {}}, 
+    "response_url": "https://hooks.slack.com/actions/debug.team.id/debug.hook.info", 
+    "actions": [{"action_id": "click_update", "block_id": "SPPe", "text": {"type": "plain_text", "text": "Update", "emoji": "True"}, "value": "eeacdd7b-e4d6-4e93-867f-236c84013aaf", "style": "primary", "type": "button", "action_ts": "1606649546.340680"}]
+    }

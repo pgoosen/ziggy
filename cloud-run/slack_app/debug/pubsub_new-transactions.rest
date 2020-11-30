@@ -1,0 +1,10 @@
+# Simple request for local testing
+POST http://localhost:8080/
+content-type: application/x-www-form-urlencoded
+User-Agent: APIs-Google
+Ce-Type: google.cloud.pubsub.topic.v1.messagePublished
+Ce-Source: topics/new-transactions
+
+payload={ 
+        "transaction_ids": ["some_id_here"]
+    }
