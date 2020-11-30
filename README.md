@@ -16,7 +16,7 @@
 3. [Project Design](#project-design)
 4. [Setup](#setup)
 
-# Overview
+# [Overview](https://community.offerzen.com/t/hackathon-create-out-of-the-ordinary-solutions-to-everyday-financial-problems/32)
 Many people struggle to build good financial habits thanks to the ease of shopping online and the instant gratification they receive, which is more alluring than watching a savings account grow a few cents at time. This project aims to help users build better financial awareness, one habit at a time, using gamification to incentivise good habits. The project gives users a fun and practical way of developing better spending habits, through individualised objectives and instant progress feedback.
 
 
