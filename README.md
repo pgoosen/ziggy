@@ -74,17 +74,17 @@ The game consists of 5 levels. A player will level up by reaching a certain amou
 
 ## Gameplay components
 ### Goals
+Goals are needed to gain experience points. Without goals, a player cannot attempt to create good habits. Goals can be created using the Ziggy Slackbot.
 
+![](images/readme/new_goal.gif)
 
-
-
-1. Define a goal by stating a *volume* or *value target* for a certain period.
-2. You can link the goal to a specific Merchant, or do a manual categorisation of the transaction.
+*Creating a new goal*
 
 
 
 ### Transactions
-Transactions are how a player progresses through the game. Each time a player makes a transaction, tehy will receive a slack notification with the details of the transaction. The player can change the budget category of the transaction in the Slackbot
+Transactions are how a player progresses through the game. Each time a player makes a transaction, tehy will receive a slack notification with the details of the transaction. The player can change the budget category of the transaction in the Slackbot.
+
 <img src="images/readme/transaction_1.png">
 
 *Transaction notification with categorisation*
