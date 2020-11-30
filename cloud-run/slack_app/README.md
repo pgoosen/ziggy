@@ -40,7 +40,7 @@ pip install -r requirements.txt
 ## Cloud Run Service + FunctionsFramework (replaced Cloud Function due to cold-start issue)
 gcloud builds submit --tag gcr.io/[GCP_PROJECT_ID]/ziggy --project [GCP_PROJECT_ID]
 
-gcloud run deploy ziggy --image gcr.io/[GCP_PROJECT_ID]/ziggy --region us-central1 --project [GCP_PROJECT_ID] --platform managed --max-instances 1 --concurrency 4 --set-env-vars "PYTHONUNBUFFERED=TRUE,SLACK_BOT_TOKEN=xoxb-[SLACK_BOT_TOKEN],SLACK_VERIFICATION_TOKEN=[SLACK_VERIFICATION_TOKEN],SLACK_SIGNING_SECRET=[SLACK_SIGNING_SECRET],SLACK_CHANNEL_ID=[SLACK_CHANNEL_ID],BUCKET_PATH=[BUCKET_URL]/zebra-avatar-images/Level{REPLACE_LEVEL}.png"
+gcloud run deploy ziggy --image gcr.io/[GCP_PROJECT_ID]/ziggy --region us-central1 --project [GCP_PROJECT_ID] --platform managed --max-instances 1 --concurrency 4 --set-env-vars "PYTHONUNBUFFERED=TRUE,SLACK_BOT_TOKEN=xoxb-[SLACK_BOT_TOKEN],SLACK_VERIFICATION_TOKEN=[SLACK_VERIFICATION_TOKEN],SLACK_SIGNING_SECRET=[SLACK_SIGNING_SECRET],SLACK_CHANNEL_ID=[SLACK_CHANNEL_ID],BUCKET_PATH=[BUCKET_URL]/Level{REPLACE_LEVEL}.png"
 
 ## PubSub general
 echo "create service account"
