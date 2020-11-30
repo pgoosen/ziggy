@@ -14,6 +14,8 @@ from game_engine.avatar import Avatar
 from game_engine.goal import Goal
 from game_engine import lookups
 
+import openapi_client
+
 
 def ProcessDailyTasks(event, context):
     """
@@ -255,5 +257,25 @@ def send_avatar_notification(avatar, hp_impact=0, xp_impact=0, level_diff=0):
 
 
 def process_daily_transactions():
-    # TODO: Implement get daily transactions
-    pass
+    client_id = os.environ.get("CLIENT_ID", None)
+    secret = os.environ.get("SECRET", None)
+
+    client = openapi_client.OpenAPIClient(client_id=client_id, secret=secret)
+    accounts = client.accounts()
+
+    to_date = datetime.now()
+    from_date = to_date - datetime.timedelta(days=1)
+
+    for account in accounts["accounts"]:
+        if account["productName"].lower() == "primesaver":
+            transactions = client.transactions(account["accountId"], from_date=from_date, to_date=to_date)
+
+            for transaction in transactions["transactions"]:
+                transaction["centsAmount"] = transaction["amount"]*100
+                # transaction["budget_category"] = lookups.BudgetCategory.Savings.value
+
+                create_transaction(transaction)
+
+def create_transaction(transaction):
+    db = firestore.Client()
+    db.collection("transactions").add(transaction)
