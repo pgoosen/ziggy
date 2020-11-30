@@ -1,0 +1,17 @@
+# Simple request for local testing
+POST http://localhost:8080/
+content-type: application/x-www-form-urlencoded
+User-Agent: APIs-Google
+Ce-Type: google.cloud.pubsub.topic.v1.messagePublished
+Ce-Source: topics/avatar-change
+
+payload={
+        "type": "avatar_update",
+        "content": {
+        "current_hp": 24.5,
+        "current_xp": 2.5,
+        "level": 4,
+        "xp_diff": 2.5,
+        "hp_diff": -10,
+        "level_diff": 1}
+    }

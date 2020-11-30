@@ -1,0 +1,14 @@
+# Simple request for local testing
+POST http://localhost:8080/
+content-type: application/x-www-form-urlencoded
+User-Agent: Slackbot
+
+payload={
+    "type": "shortcut", 
+    "token": "[TOKEN_HERE]", 
+    "action_ts": "1606649725.452125", 
+    "team": {"id": "debug.team.id", "domain": "debug.domain"}, 
+    "user": {"id": "debug.user.id", "username": "debug.user", "team_id": "debug.team.id"}, 
+    "callback_id": "list_goals", 
+    "trigger_id": "debug.trigger.id"
+    }

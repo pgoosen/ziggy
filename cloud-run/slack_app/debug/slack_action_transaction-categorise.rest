@@ -1,0 +1,19 @@
+# Simple request for local testing
+POST http://localhost:8080/
+content-type: application/x-www-form-urlencoded
+User-Agent: Slackbot
+
+payload={
+    "type": "block_actions", 
+    "user": {"id": "debug.user.id", "username": "debug.user", "name": "debug.user", "team_id": "debug.team.id"}, 
+    "api_app_id": "debug.app.id", 
+    "token": "debug.token", 
+    "container": {"type": "message_attachment", "message_ts": "1606639634.003200", "attachment_id": 1, "channel_id": "debug.channel.id", "is_ephemeral": "False", "is_app_unfurl": "False"}, 
+    "trigger_id": "debug.trigger.id", 
+    "team": {"id": "debug.team.id", "domain": "debug.domain"}, 
+    "channel": {"id": "debug.channel.id", "name": "goals"}, 
+    "message": {"bot_id": "debug.bot.id", "type": "message", "text": "", "user": "debug.user.id", "ts": "1606639634.003200", "team": "debug.team.id", "edited": {"user": "debug.bot.id", "ts": "1606639782.000000"}, "attachments": [{"id": 1, "blocks": [{"type": "header", "block_id": "72bJ", "text": {"type": "plain_text", "text": "Transaction (card)", "emoji": "True"}}, {"type": "section", "block_id": "VAfu", "fields": [{"type": "mrkdwn", "text": "*Date:* 2020-11-27T17:36:21.295Z", "verbatim": "False"}, {"type": "mrkdwn", "text": "*Merchant:* reverse_transaction_test", "verbatim": "False"}, {"type": "mrkdwn", "text": "*Amount:* 100.0 zar", "verbatim": "False"}]}, {"type": "actions", "block_id": "test_reverse_transaction_01", "elements": [{"type": "static_select", "action_id": "categorise_transaction", "placeholder": {"type": "plain_text", "text": "Select a category", "emoji": "True"}, "initial_option": {"text": {"type": "plain_text", "text": "Default", "emoji": "True"}, "value": "321f37a9-40f8-4bd7-bb6f-ed1bca04f51f"}, "options": [{"text": {"type": "plain_text", "text": "Default", "emoji": "True"}, "value": "321f37a9-40f8-4bd7-bb6f-ed1bca04f51f"}, {"text": {"type": "plain_text", "text": "Groceries", "emoji": "True"}, "value": "e2cffbed-9d1b-4406-a17d-b22d23ea297d"}, {"text": {"type": "plain_text", "text": "Bills", "emoji": "True"}, "value": "27f5d3ae-34ed-4359-8d28-21706983f82a"}, {"text": {"type": "plain_text", "text": "Transport", "emoji": "True"}, "value": "35306148-55fe-4917-9ff9-c8f1aab672f0"}, {"text": {"type": "plain_text", "text": "Entertainment", "emoji": "True"}, "value": "254b5b60-7483-4833-8132-c12d3705fb54"}, {"text": {"type": "plain_text", "text": "Other", "emoji": "True"}, "value": "e58c8d58-b263-43f1-acd5-072e4d6ecb3a"}, {"text": {"type": "plain_text", "text": "Medical", "emoji": "True"}, "value": "ef8bdc9f-5c10-471a-9362-3166ede16ea8"}, {"text": {"type": "plain_text", "text": "Education", "emoji": "True"}, "value": "70926eae-ee48-46e8-8c27-ef7de2ac7ef2"}, {"text": {"type": "plain_text", "text": "Pets", "emoji": "True"}, "value": "e072aa38-d345-46c1-9014-9bea1da77430"}, {"text": {"type": "plain_text", "text": "HobbiesSport", "emoji": "True"}, "value": "00c93710-4708-465b-b885-0c9f474ad8b8"}]}]}], "color": "#008000", "fallback": "[no preview available]"}]}, 
+    "state": {"values": {"test_reverse_transaction_01": {"categorise_transaction": {"type": "static_select", "selected_option": {"text": {"type": "plain_text", "text": "Groceries", "emoji": "True"}, "value": "e2cffbed-9d1b-4406-a17d-b22d23ea297d"}}}}}, 
+    "response_url": "https://hooks.slack.com/actions/debug.team.id/debug.hook.info", 
+    "actions": [{"type": "static_select", "action_id": "categorise_transaction", "block_id": "test_reverse_transaction_01", "selected_option": {"text": {"type": "plain_text", "text": "Groceries", "emoji": "True"}, "value": "e2cffbed-9d1b-4406-a17d-b22d23ea297d"}, "initial_option": {"text": {"type": "plain_text", "text": "Default", "emoji": "True"}, "value": "321f37a9-40f8-4bd7-bb6f-ed1bca04f51f"}, "placeholder": {"type": "plain_text", "text": "Select a category", "emoji": "True"}, "action_ts": "1606649780.372806"}]
+    }

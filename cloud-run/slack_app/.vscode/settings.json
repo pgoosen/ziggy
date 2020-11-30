@@ -1,0 +1,19 @@
+{
+    "cSpell.words": [
+        "ZIGGY",
+        "color",
+        "firestoredb",
+        "jsonify",
+        "mrkdwn",
+        "pytz",
+        "tada"
+    ],
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": false,
+    "python.linting.flake8Args": [
+        "--max-line-length=200",
+        "--ignore=E402,F841,F401,E302,E305",
+    ],
+}
