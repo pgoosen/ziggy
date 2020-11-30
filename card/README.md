@@ -8,3 +8,6 @@ This code (`main.js`) and environmental file (`env.json`) should be deployed to 
 - The `transactionApi` variable specifies the API Gateway path to the function and should include the API key used with the Gateway.
 For example:
 `"transactionApi": "https://[GATEWAY_URL]/transaction/add?key=[API_KEY_VALUE]"`
+
+
+[:arrow_left: Go back to Setup list](/README.md#setup)

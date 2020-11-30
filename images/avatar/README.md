@@ -24,3 +24,6 @@ gsutil iam ch allUsers:objectViewer gs://[BUCKET_NAME]
 ```
 gsutil cp -r [OBJECTS_LOCATION] gs://[BUCKET_NAME]/
 ```
+
+
+[:arrow_left: Go back to Setup list](/README.md#setup)

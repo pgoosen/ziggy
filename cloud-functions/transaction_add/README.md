@@ -24,3 +24,6 @@ This functions ingests transaction data from Investec after-transaction event an
   ```
   gcloud functions deploy transaction_add --entry-point=AddTransaction --runtime=python38 --trigger-http --region=us-east1 --memory=128MB --timeout=60s --env-vars-file .env.yaml
   ```
+
+
+[:arrow_left: Go back to Setup list](/README.md#setup)
