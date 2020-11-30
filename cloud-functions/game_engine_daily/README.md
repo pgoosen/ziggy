@@ -14,7 +14,10 @@ A cloud scheduler is required to trigger the cloud function daily. In order to d
 * The schedule: `0 6 * * * `
 * The target: `Pub/Sub`
 * Topic: MY_SCHEDULER_TOPIC
-
+* Payload: 
+```json
+{"task": [ "avatar_daily_health", "goal_daily_processing", "process_daily_transactions"]}
+```
 
 ### Setup before deploying
 1. Create a PubSub topic for avatar update notifications (AVATAR_TOPIC) if one hasn't been created yet. This topic is used in the `.env.yaml` file created in step 2.
