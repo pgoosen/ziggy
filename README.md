@@ -127,13 +127,12 @@ A daily process is also triggered using Cloud Scheduler and a Pub/Sub. This trig
 1. Create Google Cloud Project.
 2. Create a Firestore database [(Instructions)](firestore/README.md).
 3. Create Storage bucket and upload avatar images [(Instructions)](images/avatar/README.md).
-4. Create Pub/Sub topics [(TODO: Instructions)](pub-sub/README.md).
-5. Create Slack App Cloud Run [(TODO: Instructions)](cloud-run/README.md).
-6. Create Cloud Functions
+4. Create Slack App Cloud Run [(Instructions)](/cloud-run/slack_app/README.md).
+5. Create Cloud Functions
     - Transaction Add function [(Instructions)](cloud-functions/transaction_add/README.md).
     - Game Engine - Process transaction function [(Instructions)](cloud-functions/game_engine_process_transaction/README.md).
     - Game Engine - Process new goal function [(Instructions)](cloud-functions/game_engine_process_new_goal/README.md).
     - Game Engine - Daily update function [(Instructions)](cloud-functions/game_engine_daily/README.md).
     - Transaction Categorise function [(Instructions)](cloud-functions/transaction_categorise/README.md).
-7. Create API Gateway. [(Instructions)](api-gateway/README.md).
-8. Upload code to Investec programmable card. [(Instructions)](card/README.md).
+6. Create API Gateway. [(Instructions)](api-gateway/README.md).
+7. Upload code to Investec programmable card. [(Instructions)](card/README.md).
