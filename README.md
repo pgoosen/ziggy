@@ -2,57 +2,41 @@
 
 # Index
 1. [Overview](#overview)
-2. [The Rationale](#the-rationale)
-3. [Demo Video](#demo-video)
-4. [Gameplay](#gameplay)
-5. [Project Design](#project-design)
-6. [Setup](#setup)
+    1. [How will this project benefit you?]()
+    2. [Built with]()
+2. [Gameplay](#gameplay)
+    1. [Game rules:video_game:](#gameplay)
+        1. [Health points](#health-points)
+        2. [Experience points](#experience-points)
+        3. [Levels](#levels)
+    2. [Gameplay components]()
+        1. [Goals](#goals)
+        2. [Transactions](#transactions)
+        3. [Notifications (Slack)](#notifications-(slack))
+3. [Project Design](#project-design)
+4. [Setup](#setup)
 
 # Overview
-Many people struggle to build good financial habits thanks to the ease of shopping online and the instant gratification they receive, which is more alluring than watching a savings account grow a few cents at time. We want to help users build better financial awareness, one habit at a time, using gamification to incentivise good habits. Our solution gives users a fun and practical way of developing better spending habits, through individualised objectives and instant progress feedback.
+Many people struggle to build good financial habits thanks to the ease of shopping online and the instant gratification they receive, which is more alluring than watching a savings account grow a few cents at time. This project aims to help users build better financial awareness, one habit at a time, using gamification to incentivise good habits. The project gives users a fun and practical way of developing better spending habits, through individualised objectives and instant progress feedback.
 
 
-## How will this project benefit you?
+### How will this project benefit you?
 The goal of this project is to help players build better financial habits using gamification as an incentive to set good habits and stick to those set habits. By making progress on a goal, a player can see their avatar grow and gain experience, much like they are. Additionally, this project can be used by parent to set financial goals for their kids to teach them good financial habits from a young age.
 
 Watch a demo of the project [here](https://youtu.be/075jidzoJQs).
 
-## Investec Programmable Banking components used
-* The project makes use of the Investec Programmable Banking Card. 
-* Planned expansion includes using the Investec OpenAPI to process transactions like inter-account transfers daily. 
+### Built with
+The project was built using: 
+* Investec Programmable Banking Card
+* Google Cloud Platform
+* Custom Slackbot
+* Python3
 
-
+Planned expansion includes:
+* Using the Investec OpenAPI to process transactions like inter-account transfers daily. 
 
 # Gameplay
-
-## Goals
-1. Define a goal by stating a *volume* or *value target* for a certain period.
-2. You can link the goal to a specific Merchant, or do a manual categorisation of the transaction.
-<img src="images/readme/transaction_1.png">
-
-*Transaction notification with manual categorisation option*
-
-
-## Levels
-We created an avatar with 5 levels, which represents the game level in a visual way.
-
-![Game Levels](images/readme/Levels_no_background.png)
-
-Level **up** or **down** based on remaining on you goal's target.
-
-<img src="images/readme/Avatar_Downgrade_to_L3.png" width="250">
-
-
-
-*Notification received when leveling down to Level 3.*
-
-<img src="images/readme/Avatar_Upgrade_to_L2.png" width="250">
-
-*Notification received when leveling up to Level 2.*
-
-
-## Game rules :video_game:
-
+## Game rules:video_game:
 ### Health points
 Health points (HP) represents the health of a player. A player can have a maximum of 50 HP. T
 
@@ -83,7 +67,36 @@ A player will lose XP:
 * If a transaction is made, matched to a spendings goal and the goal limits has been reached,
 
 ### Levels
-The game consists of 5 levels. A player will level up by reaching a certain amount of XP points.
+The game consists of 5 levels. A player will level up by reaching a certain amount of XP points. A player will lose a level when their HP runs out.
+![Game Levels](images/readme/Levels_no_background.png)
+
+
+
+## Gameplay components
+### Goals
+
+
+
+
+1. Define a goal by stating a *volume* or *value target* for a certain period.
+2. You can link the goal to a specific Merchant, or do a manual categorisation of the transaction.
+
+
+
+### Transactions
+Transactions are how a player progresses through the game. Each time a player makes a transaction, tehy will receive a slack notification with the details of the transaction. The player can change the budget category of the transaction in the Slackbot
+<img src="images/readme/transaction_1.png">
+
+*Transaction notification with categorisation*
+
+
+### Notifications (Slack)
+The interface for the game is a custom Slackbot called Ziggy. Using the Slackbot, players will receive near instantaneous notifications of the progress their avatar makes. These notifications include avatar updates and new transaction notifications.
+
+
+![](images/readme/categorise-transaction.gif)
+
+*Different notifications a player receives*
 
 
 
@@ -96,5 +109,17 @@ The project is design to be cloud native on Google Cloud Platform. The project m
 
 The diagram below shows a simplified overview of the system design and implementation.
 ![Systems Diagram](design/systems_diagram.png)
+
+**The system flow is as follows:**
+
+The user can create goals using the Slackbot. The goal is added to the goals collection in the firestore database. The goal create function triggers the game_engine_process_new_goal cloud function that increases the avatar xp. The update to the avatar document posts a message to the avatar change Pub/Sub which sends a notification to the user using the Slackbot.
+
+The user can update or delete goals as well, usingthe Slackbot. The update or delete goals actions do not trigger any changes to the avatar. The goal document inthe goals collection in Firestore is updated as required.
+
+When the user uses their Investec Programmable Card, the transaction is captured and stored in the transactions collection in Firestore. The `create` event triggers the transaction_categorise cloud function that attempts to categorise the transaction based on the merchant. A notification is created to send to the user using the Slackbot. The user has the option of setting or updating the transaction category. 
+
+The setting or updating of the transaction category triggers an update event. The firestore update event triggers the game_engine_process_transaction cloud function. This function processes the transaction against goals and update the avatar as needed (xp, hp, and level). Once the avatar has been updated, a notification is sent to the user using the Slackbot.
+
+A daily process is also triggered using Cloud Scheduler and a Pub/Sub. This triggers a few daily tasks such as increasing the avatar health, activating and deactviating goals, and processing completed goals.
 
 # Setup
