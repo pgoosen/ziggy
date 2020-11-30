@@ -28,12 +28,10 @@ Watch a demo of the project [here](https://youtu.be/075jidzoJQs).
 ### Built with
 The project was built using: 
 * [Investec Programmable Banking Card](https://developer.investec.com/programmable-banking/#programmable-banking)
+* [Investec OpenAPI](https://developer.investec.com/programmable-banking/#open-api)
 * Google Cloud Platform
 * Custom Slackbot
 * Python3
-
-Planned expansion includes:
-* Using the [Investec OpenAPI](https://developer.investec.com/programmable-banking/#open-api) to process transactions like inter-account transfers daily. 
 
 # Gameplay
 ## Game rules:video_game:
@@ -80,7 +78,9 @@ Goals are needed to gain experience points. Without goals, a player cannot attem
 
 *Creating a new goal*
 
+Players can create Spending or Saving type goals. Spending goals makes use of the Investec Programmable Banking card to capture transactions. 
 
+Savings goals are processed using the Investec OpenAPI to capture transactions to PrimeSaver accounts once a day. 
 
 ### Transactions
 Transactions are how a player progresses through the game. Each time a player makes a transaction, tehy will receive a slack notification with the details of the transaction. The player can change the budget category of the transaction in the Slackbot.
