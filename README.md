@@ -21,24 +21,24 @@ Many people struggle to build good financial habits thanks to the ease of shoppi
 
 
 ### How will this project benefit you?
-The goal of this project is to help players build better financial habits using gamification as an incentive to set good habits and stick to those set habits. By making progress on a goal, a player can see their avatar grow and gain experience, much like they are. Additionally, this project can be used by parent to set financial goals for their kids to teach them good financial habits from a young age.
+The goal of this project is to help players build better financial habits using gamification as an incentive to set good habits and stick to those set habits. By making progress on a goal, a player can see their avatar grow and gain experience, much like they are. Additionally, this project can be used by parents to set financial goals for their kids to teach them good financial habits from a young age.
 
 Watch a demo of the project [here](https://youtu.be/075jidzoJQs).
 
 ### Built with
 The project was built using: 
-* Investec Programmable Banking Card
+* [Investec Programmable Banking Card](https://developer.investec.com/programmable-banking/#programmable-banking)
 * Google Cloud Platform
 * Custom Slackbot
 * Python3
 
 Planned expansion includes:
-* Using the Investec OpenAPI to process transactions like inter-account transfers daily. 
+* Using the [Investec OpenAPI](https://developer.investec.com/programmable-banking/#open-api) to process transactions like inter-account transfers daily. 
 
 # Gameplay
 ## Game rules:video_game:
 ### Health points
-Health points (HP) represents the health of a player. A player can have a maximum of 50 HP. T
+Health points (HP) represents the health of a player. A player can have a maximum of 50 HP. 
 
 #### Gaining/Losing HP
 A player will gain HP daily.
@@ -59,7 +59,7 @@ A player will gain XP:
 * If a transaction is made, matched to a spendings goal and the goal limits has not been reached,
 * If a new goal is made,
 * If a goal is completed and the player has managed to stay within limits (spending) or reached target (savings)
-* 
+
 
 A player will lose XP:
 * If the end date of a spendings goal has been reached and the player has gone over the goal limits,
