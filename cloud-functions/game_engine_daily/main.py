@@ -275,6 +275,7 @@ def process_daily_transactions():
 
             for transaction in transactions["transactions"]:
                 transaction["centsAmount"] = transaction["amount"]*100
+                transaction["reference"] = "saving"
                 # transaction["budget_category"] = lookups.BudgetCategory.Savings.value
                 print(transaction)
                 create_transaction(transaction)
