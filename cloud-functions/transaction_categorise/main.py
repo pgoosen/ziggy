@@ -21,9 +21,18 @@ def CategoriseTransaction(event, context):
         print("No data in event payload")
         return Response("No data in event payload", status=500)
 
-    transaction = format_dictionary(event["value"]["fields"])
+    try:
+        reference = event["value"]["fields"]["reference"]["stringValue"]
+    except:
+        reference = None
+
+    if reference == "saving":
+        category = "41af5158-5dcd-41c7-857f-9f22549fd4cc"
+    else:
+        transaction = format_dictionary(event["value"]["fields"])
+        category = get_merchant_category(transaction["merchant"])
+
     transaction_id =  event["value"]["name"].split("/")[-1]
-    category = get_merchant_category(transaction["merchant"])
 
     # Save transaction to db
     if category:
