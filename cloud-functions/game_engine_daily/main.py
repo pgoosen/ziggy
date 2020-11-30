@@ -11,6 +11,7 @@ from google.cloud import pubsub_v1
 
 from flask import jsonify
 from datetime import datetime
+from datetime import timedelta
 
 from game_engine.transaction import Transaction
 from game_engine.avatar import Avatar
@@ -265,16 +266,17 @@ def process_daily_transactions():
     accounts = client.accounts()
 
     to_date = datetime.now()
-    from_date = to_date - datetime.timedelta(days=1)
+    from_date = to_date - timedelta(days=10)
 
     for account in accounts["accounts"]:
+        print(account)
         if account["productName"].lower() == "primesaver":
             transactions = client.transactions(account["accountId"], from_date=from_date, to_date=to_date)
 
             for transaction in transactions["transactions"]:
                 transaction["centsAmount"] = transaction["amount"]*100
                 # transaction["budget_category"] = lookups.BudgetCategory.Savings.value
-
+                print(transaction)
                 create_transaction(transaction)
 
 def create_transaction(transaction):
@@ -314,13 +316,13 @@ class OpenAPIClient():
         self.timeout = timeout
         self.requests_session = requests.Session()
         self.api_host = "https://openapi.investec.com"
-        self.token_expires = datetime.datetime.now()
+        self.token_expires = datetime.now()
         self.token = None
     
     def api_call(self, service_url: str, method: str="get", params: dict=None, body: str=None) -> dict:
         """ Helper function to create calls to the API."""
 
-        if not self.token or datetime.datetime.now() >= self.token_expires:
+        if not self.token or datetime.now() >= self.token_expires:
             self.get_access_token() # Need to get a new token
 
         request = getattr(self.requests_session, method)
@@ -360,7 +362,7 @@ class OpenAPIClient():
 
         self.token = response["access_token"]
         token_expiry = response["expires_in"] - 60 
-        self.token_expires = datetime.datetime.now() + datetime.timedelta(seconds=token_expiry)
+        self.token_expires = datetime.now() + timedelta(seconds=token_expiry)
 
     def accounts(self) -> dict:
         """ Gets the available accounts."""
