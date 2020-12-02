@@ -5,11 +5,15 @@
     1. [How will this project benefit you?]()
     2. [Built with]()
 2. [Gameplay](#gameplay)
-    1. [Game rules:video_game:](#gameplay)
+    1. [How to play](#how-to-play)
+        1. [Set goals](#set-goals)
+        2. [Spend using your Investec card](#spend-using-your-investec-card)
+        3. [Watch your avatar grow](#watch-your-avatar-grow)
+    2. [Game rules:video_game:](#gameplay)
         1. [Health points](#health-points)
         2. [Experience points](#experience-points)
         3. [Levels](#levels)
-    2. [Gameplay components]()
+    3. [Gameplay components]()
         1. [Goals](#goals)
         2. [Transactions](#transactions)
         3. [Notifications (Slack)](#notifications-(slack))
@@ -35,6 +39,48 @@ The project was built using:
 * Python3
 
 # Gameplay
+
+## How to play
+### Set goals
+The player can set two types of goals: Savings and Spending. The Savings type goals only need a value as parameter. 
+<img src="images/readme/set_new_goal_savings.gif">
+
+*Setting a savings goal*
+
+The Spending type goals have many different settings. The player can choose whether they want the goal to be determined by total value spent, or by th enumber of transactions made during the goal period. The player can also choose if the goal is based on a budget category, or based on merchant details.
+
+<img src="images/readme/set_new_goal.gif">
+
+*Setting a budget based spendings goal with a value limit*
+
+<img src="images/readme/set_new_goal_num_transactions.gif">
+
+*Setting a merchant based spendings goal with a number of transactions limit*
+
+
+### Spend using your Investec card
+Every time you make a transaction using your Investec card, the transaction is categorised. Automatic transaction categorisation is attempted before requesting a category from the player.
+
+<img src="images/readme/transaction_categorise_avatar_update.gif">
+
+*Automatic transaction categorisation*
+
+When a transaction cannot be categorised automatically, the player can categorise the transaction. The player can also change the category of transaction at a later date.
+
+<img src="images/readme/transaction_manual_categorise.gif">
+
+*Manual transaction categorisation*
+
+
+### Watch your avatar grow
+With each transaction you make you will either gain or lose experience and health points. An avatar status report can be requested via the slack app.
+<img src="images/readme/avatar_report.gif">
+
+*Request avatar status report*
+
+Every time a transaction is matched to an active goal, the avatar status is updated and the player is notified of the avatar status. See [Game rules:video_game:](#gameplay) for games rules regarding experience points, health points and avatar level.
+
+
 ## Game rules:video_game:
 ### Health points
 Health points (HP) represents the health of a player. A player can have a maximum of 50 HP. 
